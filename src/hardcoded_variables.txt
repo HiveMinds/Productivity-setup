@@ -1,0 +1,109 @@
+LOG_LOCATION=src/logs/
+SUPPORTED_SOFTWARE_LIST_LOCATION=src/supported_software.txt
+SELECTED_SOFTWARE_LIST_LOCATION=src/logs/selected_software.txt
+SELECTED_SOFTWARE_FILENAME=selected_software.txt
+INSTALLATION_TYPES=("apt" "snap" "custom" "needUserInput" "deviceDependent")
+USER1_APT_PACKAGES=("github" "somepackage")
+USER1_SNAP_PACKAGES=("none" "otherfiller")
+USER1_CUSTOM_PACKAGES=("custompackage" "anothercustompackage")
+USER1_NEEDUSERINPUT_PACKAGES=("needuserinputpackage" "anotherneeduserinputpackage")
+USER1_DEVICEDEPENDENT_PACKAGES=("devicedependentpackage" "anotherdevicedependentpackage")
+
+# EnergizedProtection
+
+FILEPATH_UNPACKED_PACKAGE=$LOG_LOCATION"hosts"
+FILEPATH_HOST=/etc/hosts
+FILEPATH_NR_LINES_HOSTFILE=$LOG_LOCATION"target_file_length"
+TARGET_DUPLICATE_PATH=$LOG_LOCATION"hosts"
+FILEPATH_HOSTFILE_CONTAINS_UNMODIFIED_PACKAGE=$LOG_LOCATION"target_contains_social_package"
+FILEPATH_HOSTFILE_CONTAINS_MODIFIED_PACKAGE=$LOG_LOCATION"target_contains_modified_social_package"
+FILEPATH_PACKAGE_INDICATOR_LINE_NR=$LOG_LOCATION"starting_line_query_result"
+ENDING_LINE_QUERY_VAR_PATH=$LOG_LOCATION"ending_line_query_result"
+FILEPATH_RELATIVE_ENDING_LINE_NR_OF_PACKAGE=$LOG_LOCATION"relative_ending_line_nr_social_package"
+FILEPATH_LINE_NR_PACKAGE_END_IN_HOSTFILE=$LOG_LOCATION"absolute_ending_line_nr_social_package"
+FILEPATH_NR_LINES_IN_HOSTFILE_AFTER_PACKAGE_INDICATOR=$LOG_LOCATION"remaining_nr_of_lines_in_target_after_starting_line"
+FILEPATH_REMAINING_LINES_HOSTFILE_AFTER_PACKAGE_INDICATOR=$LOG_LOCATION"remaining_lines_in_target_after_starting_line"
+FILEPATH_HOST_AFTER_MODIFIED_PACKAGE_REMOVAL=$LOG_LOCATION"target_path_after_modified_package_removal"
+
+LOGFILE_PATH_0=$LOG_LOCATION"custom_install_0_energizedprotection".txt
+LOGFILE_PATH_1=$LOG_LOCATION"custom_install_1_energizedprotection".txt
+LOGFILE_PATH_2=$LOG_LOCATION"custom_install_2_energizedprotection".txt
+LOGFILE_PATH_3=$LOG_LOCATION"custom_install_3_energizedprotection".txt
+LOGFILE_PATH_4=$LOG_LOCATION"custom_install_4_energizedprotection".txt
+LOGFILE_PATH_5=$LOG_LOCATION"custom_install_5_energizedprotection".txt
+LOGFILE_PATH_6=$LOG_LOCATION"custom_install_6_energizedprotection".txt
+LOGFILE_PATH_7=$LOG_LOCATION"custom_install_7_energizedprotection".txt
+LOGFILE_PATH_8=$LOG_LOCATION"custom_install_8_energizedprotection".txt
+LOGFILE_PATH_9=$LOG_LOCATION"custom_install_9_energizedprotection".txt
+LOGFILE_PATH_10=$LOG_LOCATION"custom_install_10_energizedprotection".txt
+LOGFILE_PATH_11=$LOG_LOCATION"custom_install_11_energizedprotection".txt
+
+# Social package
+FILEPATH_DOWNLOADED_PACKAGE_GZ=$LOG_LOCATION"hosts.gz"
+URL_SOCIAL_PACKAGE_GZ="https://github.com/HiveMinds-EU/Productivity-setup/raw/main/src/productivity/hosts_s.gz"
+URL_PORN_PACKAGE_GZ="https://github.com/HiveMinds-EU/Productivity-setup/raw/main/src/productivity/hosts_p.gz"
+URL_ADDITIONAL_PACKAGE_GZ="https://github.com/HiveMinds-EU/Productivity-setup/raw/main/src/productivity/hosts_a.gz"
+
+
+
+SOCIAL_PACKAGE_INDICATOR_LINE="# Title: Energized Social Extension"
+PORN_PACKAGE_INDICATOR_LINE="# Package: Energized Porn Protection"
+ADDITIONAL_PACKAGE_INDICATOR_LINE="# Package: Additional Protection"
+STARTBLOCK_SOCIAL_PACKAGE="#    _____  _________  _____________  _______
+#   / __/ |/ / __/ _ \/ ___/  _/_  / / __/ _ \ 
+#  / _// ,  / _// , _/ (_ // /  / /_/ _// // /
+# /___/_/|_/___/_/|_|\___/___/ /___/___/____/
+#
+#    P   R   O   T   E   C   T   I   O   N
+# --------------------------------------------
+#          ad.porn.malware blocking.
+#                   ------
+#      Merged collection of hosts from
+#             reputable sources.
+# --------------------------------------------
+#               energized.pro
+#    gitahub.com/EnergizedProtection/block
+# --------------------------------------------
+#
+#        Let's make an annoyance free
+#      better open internet. Altogether.
+#                  ------
+#
+# --------------------------------------------
+# P A C K  D E T A I L S
+# --------------------------------------------
+# Title: Energized Social Extension"
+
+
+
+OFFSET_SOCIAL_PACKAGE_INDICATOR_LINE=23 # lines
+OFFSET_PORN_PACKAGE_INDICATOR_LINE=23 # lines
+OFFSET_ADDITIONAL_PACKAGE_INDICATOR_LINE=23 # lines
+
+ENDBLOCK_SOCIAL_PACKAGE="# --------------------------------------------
+# E N E R G I Z E D  E N D S
+# --------------------------------------------
+#
+# - - - -  S T A Y  E N E R G I Z E D  - - - -"
+		
+SOCIAL_PACKAGE_END_INDICATOR_LINE="# - - - -  S T A Y  E N E R G I Z E D  - - - -"
+PORN_PACKAGE_END_INDICATOR_LINE="# - - - -  S T A Y  E N E R G I Z E D  - - - -"
+
+LENGTH_SOCIAL_PACKAGE=4018
+#LENGTH_PORN_PACKAGE=316089
+LENGTH_PORN_PACKAGE=316080
+LENGTH_ADDITIONAL_PACKAGE=423
+
+
+LANGUAGE_TOOL_DIR=$LOG_LOCATION/language_tool
+LANGUAGE_TOOL_SNAPSHOT_DIRNAME=LanguageTool-5.4-SNAPSHOT
+LANGUAGE_TOOL_SNAPSHOT_PATH=$LANGUAGE_TOOL_DIR/languagetool-standalone/target/$LANGUAGE_TOOL_SNAPSHOT_DIRNAME/$LANGUAGE_TOOL_SNAPSHOT_DIRNAME
+LANGUAGE_TOOL_TARGET_DIR=/etc/language_tool
+LANGUAGE_TOOL_CLI_CONTROL_SCRIPTNAME=language_tool_cli.sh
+LANGUAGE_TOOL_NATIVE_CONTROL_SCRIPTNAME=language_tool_native.sh
+LATEX_GRAMMAR_CLI_SCRIPTNAME=latex_grammar_cli.sh
+LATEX_GRAMMAR_NATIVE_SCRIPTNAME=latex_grammar_native.sh
+LANGUAGE_TOOL_CLI_TARGET_FILENAME=languagetool-commandline.jar
+LANGUAGE_TOOL_NATIVE_TARGET_FILENAME=languagetool.jar
+
+OPENDETEX_DIR=$LOG_LOCATION/opendetex
