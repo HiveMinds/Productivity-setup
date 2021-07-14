@@ -3,6 +3,10 @@
 apt_update() {
 	local LOG_PATH=$1
 	
+	# TODO: move into separate file
+	yes | sudo apt install wget
+	yes | sudo apt install curl
+	
 	# Delete key if it already existed from previous installation
 	if [ -f nordvpn-release_1.0.0_all.deb ]; then
 		sudo rm nordvpn-release_1.0.0_all.deb
