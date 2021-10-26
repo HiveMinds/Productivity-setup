@@ -13,6 +13,7 @@ source src/apt_searchmonkey.sh
 source src/apt_texlive_xetex.sh
 source src/apt_texmaker.sh
 source src/apt_wine.sh
+source src/apt_zotero.sh
 source src/snap_anki.sh
 source src/snap_notepad_plus_plus.sh
 source src/custom_anaconda.sh
@@ -42,6 +43,8 @@ install_user_choices() {
 			$(install_github) # install user choice: github
 		elif [ "${selected_software_packages[i]}" == keepass2 ]; then
 			$(install_keepass2) # install user choice: keepass2
+		elif [ "${selected_software_packages[i]}" == language_tool ]; then
+			$(install_language_tool) # install user choice: wine
 		elif [ "${selected_software_packages[i]}" == nordvpn ]; then
 			$(install_nordvpn) # install user choice: nordvpn
 		elif [ "${selected_software_packages[i]}" == notepad++ ]; then
@@ -60,8 +63,8 @@ install_user_choices() {
 			$(install_texmaker) # install user choice: texmaker
 		elif [ "${selected_software_packages[i]}" == wine ]; then
 			$(install_wine) # install user choice: wine
-		elif [ "${selected_software_packages[i]}" == language_tool ]; then
-			$(install_language_tool) # install user choice: wine
+		elif [ "${selected_software_packages[i]}" == zotero ]; then
+			$(install_zotero) # install user choice: zotero
 		fi
 	done
 }
@@ -103,6 +106,9 @@ test_user_choice_installation() {
 			test_texmaker
 		elif [ "${selected_software_packages[i]}" == wine ]; then
 			test_wine
+		elif [ "${selected_software_packages[i]}" == zotero ]; then
+			test_zotero
 		fi
+		
 	done
 }

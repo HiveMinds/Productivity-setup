@@ -11,6 +11,7 @@ apt: signal
 apt: texlive-xetex
 apt: texmaker
 apt: wine
+apt: zotero
 installationType: snap
 snap: anki
 snap: notepad++

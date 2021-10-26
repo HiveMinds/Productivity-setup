@@ -22,6 +22,7 @@ the uninstallation of the other packages is not yet created.
 ## Usage: Testing
 First install the required submodules with:
 ```
+rm -r test/libs/*
 chmod +x install-bats-libs.sh
 ./install-bats-libs.sh
 ```
