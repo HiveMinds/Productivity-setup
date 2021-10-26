@@ -21,6 +21,9 @@ source src/custom_install_energizedprotection.sh
 source src/custom_language_tool.sh
 
 install_user_choices() {
+	# TODO: read input argument list, if it is non-zero, then do not read packages from user.
+	# TODO: map the words in this list with those of the input arguments
+
 	selected_software_packages=($(read_software_packages "selected")) # outer brackets to store as list
 	
 	# loop through selected packages
