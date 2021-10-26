@@ -1,5 +1,4 @@
 mkdir -p test/libs
-git rm -r --cached test/libs/
 
 git submodule add -f https://github.com/sstephenson/bats test/libs/bats
 git submodule add -f https://github.com/ztombol/bats-support test/libs/bats-support
