@@ -115,7 +115,7 @@ cli_args_to_package_list() {
 	# initialise lists of softwares that are evaluated
 	supported_software_packages=""
 	selected_software_packages=""
-	echo "in installation_types=${installation_types[@]}"
+	
 	# loop through each installation type
 	for i in "${!installation_types[@]}"; do
 		
@@ -147,7 +147,7 @@ cli_args_to_package_list() {
 	done
 	
 	
-	echo "The selected software packages are:"
+	#echo "The selected software packages are:"
 	echo $selected_software_packages
 	
 	# TODO: ask verification of correctness of list to user.

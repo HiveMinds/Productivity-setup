@@ -179,16 +179,14 @@ echo "package_list=${package_list[@]}"
 function run_prompt_user_choice() {
 	supported_installation_categories=$(read_categories "supported")
 	
-	# Export the user choices.
-	cli_args_to_package_list "${package_list[@]}"
-	
-	
-	# Assumption: this writes the selected packages to a selected_packages_list.txt 
-	# TODO: delete this such a list if it exists from the previous installation.
-	# TODO: verify the list is deleted
-	# TODO: get the argument package list if it is non empty and write that to the selected_packages_list.txt 
-	# TODO: skip the manual yes/no prompting below if the user gave an argument list.
-	selected_software_packages=$(prompt_user_choice "install" $supported_installation_categories)
+	if [ "${package_list[0]}" != "" ]; then
+		# Export the user choices.
+		selected_software_packages=$(cli_args_to_package_list "${package_list[@]}")
+	else
+		echo "ask user"
+		# Assumption: this writes the selected packages to a selected_packages_list.txt 
+		selected_software_packages=$(prompt_user_choice "install" $supported_installation_categories)
+	fi
 	
 	echo "The selected_software_packages for installation are:"
 	echo $selected_software_packages
