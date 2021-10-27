@@ -1,7 +1,9 @@
 #!/bin/bash
-apt_install_zotero_1() {
+# Verify this script is ran as root.
+has_root_privilige() {
 	local LOG_PATH=$1
-	installation_log=$(yes | sudo apt install zotero)
-	echo $installation_log > "${LOG_PATH}"
+	if [ `whoami` != root ]; then
+		echo "Please run this script as root or using sudo" > "${LOG_PATH}"
+	fi
 }
-apt_install_zotero_1 "$@"
+has_root_privilige "$@"

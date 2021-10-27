@@ -67,7 +67,7 @@ install_user_choices() {
 		elif [ "${selected_software_packages[i]}" == wine ]; then
 			$(install_wine) # install user choice: wine
 		elif [ "${selected_software_packages[i]}" == zotero ]; then
-			$(install_zotero) # install user choice: zotero
+			install_zotero # install user choice: zotero
 		fi
 	done
 }
