@@ -8,7 +8,6 @@ read_categories() {
 	if [[ $data_source == "supported" ]]; then
 		echo $(awk '/installationType:/ {print $2}' $SUPPORTED_SOFTWARE_LIST_LOCATION)
 	fi
-	
 }
 
 
@@ -85,6 +84,68 @@ prompt_user_choice() {
 	    		fi
     		done
 	done
+	
+	echo "The selected software packages are:"
+	echo $selected_software_packages
+	
+	# TODO: ask verification of correctness of list to user.
+}
+
+# Convert the arguments passed to the cli in the form of a list of selected packages to an output file.
+cli_args_to_package_list() {
+	
+	# read incoming list of installation types that are tested
+	cli_args=("$@")
+	#echo "cli_args=${cli_args[@]}"
+	
+	# TODO: swap username with element in this list make switch case.
+	
+	# read the installation types that are tested
+	installation_types=$(read_categories "supported")
+	installation_types=($installation_types) # convert to array
+	#echo "in installation_types=${installation_types[@]}"
+	
+	# clear output log
+	source src/helper.sh
+	$(remove_log_file $SELECTED_SOFTWARE_FILENAME)
+	
+	# create output log file
+	$(create_log_file $SELECTED_SOFTWARE_FILENAME $LOG_LOCATION)
+	
+	# initialise lists of softwares that are evaluated
+	supported_software_packages=""
+	selected_software_packages=""
+	echo "in installation_types=${installation_types[@]}"
+	# loop through each installation type
+	for i in "${!installation_types[@]}"; do
+		
+		# Append the installation type to the user selection log
+		echo "installationType: ${installation_types[i]}" >> $LOG_LOCATION$SELECTED_SOFTWARE_FILENAME
+		
+		# read the possible software packages per installation type
+		new_software=$(read_software_packages_per_category "supported" "${installation_types[i]}")
+		
+		# Convert software packages from string to list
+		new_software_list=($new_software)
+		
+		# Loop through list of software packages
+		for j in "${!new_software_list[@]}"; do
+			for k in "${!cli_args[@]}"; do
+				
+				# add the software package to the list or not, depending on user cli arguments
+				if [ "${new_software_list[j]}" == "${cli_args[k]}" ]; then
+					
+					# add the software package to the variable list
+					selected_software_packages+=${new_software_list[j]}" "
+		    		
+		    		# add the software package to the user selection log
+		    		echo "${installation_types[i]}: "${new_software_list[j]} >> $LOG_LOCATION$SELECTED_SOFTWARE_FILENAME
+	    		fi
+			done
+			
+		done
+	done
+	
 	
 	echo "The selected software packages are:"
 	echo $selected_software_packages

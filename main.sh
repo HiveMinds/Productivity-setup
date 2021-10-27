@@ -36,27 +36,26 @@ print_usage() {
 	printf "\nTo install the autokey software and zotero."
 	printf "\n\n    ./main.sh -h\n    ./main.sh --help\nTo see this menu.\n\n"
 	printf "The supported package argument list is:\n"
-	printf "autokey\n"
+	printf "anaconda\n"
+	printf "anki\n"
+	printf "autokey-gtk\n"
 	printf "brave\n"
+	printf "energizedprotection_social\n"
+	printf "energizedprotection_porn\n"
+	printf "energizedprotection_additional\n"
 	printf "github\n"
 	printf "keepass2\n"
+	printf "language_tool\n"
 	printf "nordvpn\n"
+	printf "notepad++\n"
 	printf "openvpn3\n"
 	printf "privoxy\n"
 	printf "searchmonkey\n"
 	printf "signal\n"
-	printf "texlive\n"
+	printf "texlive-xetex\n"
 	printf "texmaker\n"
 	printf "wine\n"
 	printf "zotero\n"
-	printf "anki\n"
-	printf "notepad\n"
-	printf "anaconda\n"
-	printf "ep_soc\n"
-	printf "ep_pn\n"
-	printf "ep_extra\n"
-	printf "language_tool\n"
-	
 	printf "\n\n"
 }
 
@@ -179,6 +178,10 @@ echo "package_list=${package_list[@]}"
 # get list of all possible installation types and pass it to the prompt.
 function run_prompt_user_choice() {
 	supported_installation_categories=$(read_categories "supported")
+	
+	# Export the user choices.
+	cli_args_to_package_list "${package_list[@]}"
+	
 	
 	# Assumption: this writes the selected packages to a selected_packages_list.txt 
 	# TODO: delete this such a list if it exists from the previous installation.
