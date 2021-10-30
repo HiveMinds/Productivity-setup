@@ -198,4 +198,5 @@ function run_prompt_user_choice() {
 	# test selected packages.
 	test_user_choice_installation
 }
+sudo chmod +x src/*.sh
 run_prompt_user_choice "$@"

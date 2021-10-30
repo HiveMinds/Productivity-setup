@@ -120,3 +120,34 @@ read_user_key_from_log() {
 	RESULT=${value:14:36}
 	echo $RESULT
 }
+
+
+# allows a string with spaces, hence allows a line
+file_contains_string() {
+	STRING=$1
+	REL_FILEPATH=$2
+	if [[ ! -z $(grep "$STRING" "$REL_FILEPATH") ]]; then 
+		echo "FOUND"; 
+	else
+		echo "NOTFOUND";
+	fi
+}
+
+get_line_nr() {
+	eval STRING="$1"
+	REL_FILEPATH=$2
+	line_nr=$(awk "/$STRING/{ print NR; exit }" $REL_FILEPATH)
+	echo $line_nr
+}
+
+# Replace the line of the given line number with the given replacement in the given file.
+function replace_line_in_file_with_string() {
+    local line_nr="$1"
+	local filepath="$2"
+    local replacement="$3"
+
+    # Escape backslash, forward slash and ampersand for use as a sed replacement.
+    replacement_escaped=$( echo "$replacement" | sed -e 's/[\/&]/\\&/g' )
+
+    sed -i "${line_nr}s/.*/$replacement_escaped/" "$filepath"
+}

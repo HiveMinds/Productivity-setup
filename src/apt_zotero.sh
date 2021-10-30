@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source src/change_default_opening_application.sh
+
 # Declare filenames of files that perform commands to install nordvpn
 install_zotero() {
 	
@@ -7,14 +9,21 @@ install_zotero() {
 	
 	# Declare filenames of files that perform commands
 	declare -a arr=(
-		"apt_install_zotero_0"
-		"apt_install_zotero_1"
-		"apt_install_zotero_2"
-		"apt_install_zotero_3"
-		"apt_install_zotero_4"
-		"apt_install_zotero_5"
+		#"apt_install_zotero_0" # wget curl installation
+		#"apt_install_zotero_1" # check has root privilige
+		#"apt_install_zotero_2" # architecture check
+		#"apt_install_zotero_3" # specify keyring
+		#"apt_install_zotero_4" # modify key
+		#"apt_install_zotero_5" # eof reading
 		"apt_0_update"
-		"apt_install_zotero_6"
+		#"apt_install_zotero_6" # installs apt zotero
+		"apt_install_zotero_source"
+		"apt_install_zotero_7" # Get and compile addon
+		#"change_default_opening_application" # of xpi file with zotero
+		#"apt_install_zotero_8" # opens addon .xpi
+		#"apt_install_zotero_9" # export xpi file of addon to extension dir
+		"apt_install_zotero_10" # removes line from prefs.js
+		"apt_install_zotero_11" # removes line from prefs.js
 		# TODO: detect if libreoffice is installed, and if yes, install the libreoffice plugin
 		# TODO: detect if libreoffice is being installed, and if yes, do that first.
 		# TODO: detect if brave is installed, and if yes, install the brave plugin
