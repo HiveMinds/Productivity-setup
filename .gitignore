@@ -12,3 +12,6 @@
 	url = https://github.com/ztombol/bats-file
 
 src/logs/*
+src/submodules/*
+
+package-lock.json

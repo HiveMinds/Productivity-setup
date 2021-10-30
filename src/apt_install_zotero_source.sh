@@ -1,6 +1,8 @@
 #!/bin/bash
 
 sudo mkdir -p src/submodules/zotero
+sudo chown -R $(whoami) src/submodules/*
+
 # 1. Clone the Zotero source code, Zotero XPI build scripts, and standalone client build scripts:
 git clone --recursive https://github.com/zotero/zotero "src/submodules/zotero/zotero-client"
 git clone --recursive https://github.com/zotero/zotero-build "src/submodules/zotero/zotero-build"
