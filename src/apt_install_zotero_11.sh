@@ -19,7 +19,7 @@ apt_install_zotero_11() {
 		# remove two lines from prefs.js
 		line_nr=$(get_line_nr "extensions.lastAppVersion" "$abs_filepath")
 		replace_line_in_file_with_string "$line_nr" "$abs_filepath" ""
-		read -p "FOUND file line_nr=$line_nr"
+		#read -p "FOUND file line_nr=$line_nr"
 	else
 		read -p "DID not find file at: $abs_filepath"
 	fi

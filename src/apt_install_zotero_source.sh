@@ -8,10 +8,17 @@ git clone --recursive https://github.com/zotero/zotero "src/submodules/zotero/zo
 git clone --recursive https://github.com/zotero/zotero-build "src/submodules/zotero/zotero-build"
 git clone --recursive https://github.com/zotero/zotero-standalone-build "src/submodules/zotero/zotero-standalone-build"
 
+# Switch out build file to add additional plugin
+cp -r "src/build.sh" "src/submodules/zotero/zotero-standalone-build/build.sh"
+
+# Extra, copy module into standalone-build
+#mkdir -p "src/submodules/zotero/zotero-standalone-build/modules/zotero-scihub"
+cp -r "src/submodules/zotero/zotero-scihub/build" "src/submodules/zotero/zotero-standalone-build/modules/"
+mv "src/submodules/zotero/zotero-standalone-build/modules/build" "src/submodules/zotero/zotero-standalone-build/modules/zotero-scihub"
 
 # 2. Change to the source code repo and install Node.js modules using Node 8 or later:
 cd "src/submodules/zotero/zotero-client"
-npm i
+npm install
 
 
 # 3. Run the JS build process (Babel, etc.):
@@ -76,6 +83,6 @@ scripts/dir_build
 # and ran with:
 #staging/Zotero_linux-x86_64/zotero
 # WORKS!
-timeout 20s staging/Zotero_linux-x86_64/zotero
+staging/Zotero_linux-x86_64/zotero
 cd ../../../../
 echo "PWD=$PWD"
