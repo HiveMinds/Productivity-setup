@@ -193,9 +193,10 @@ function run_prompt_user_choice() {
 	
 	# install selected packages.
 	# shellcheck disable=SC2091
-	$(install_user_choices)
+	install_user_choices
 	
 	# test selected packages.
 	test_user_choice_installation
 }
+sudo chmod +x src/*.sh
 run_prompt_user_choice "$@"
