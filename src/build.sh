@@ -661,7 +661,6 @@ if [ $BUILD_LINUX == 1 ]; then
 		
 		# Add word processor plug-ins
 		mkdir "$APPDIR/extensions"
-		read -p "Just made extensions directory"
 		cp -RH "$CALLDIR/modules/zotero-libreoffice-integration" "$APPDIR/extensions/zoteroOpenOfficeIntegration@zotero.org"
 		perl -pi -e 's/\.SOURCE<\/em:version>/.SA.'"$VERSION"'<\/em:version>/' "$APPDIR/extensions/zoteroOpenOfficeIntegration@zotero.org/install.rdf"
 		echo
@@ -689,7 +688,6 @@ if [ $BUILD_LINUX == 1 ]; then
 		echo 'pref("extensions.scihub@example.com.version", "");'  >> "$APPDIR/defaults/preferences/prefs.js"
 		echo 'pref("extensions.scihub@example.com.installed", false);'  >> "$APPDIR/defaults/preferences/prefs.js"
 		echo 'pref("extensions.scihub@example.com.skipInstallation", false);'  >> "$APPDIR/defaults/preferences/prefs.js"
-		read -p "ADDED ADDON PREFERENCES, verify they are located in: $APPDIR/defaults/preferences/prefs.js"
 		echo >> "$APPDIR/defaults/preferences/prefs.js"
 		
 		

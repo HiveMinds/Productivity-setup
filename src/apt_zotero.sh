@@ -9,6 +9,7 @@ install_zotero() {
 	
 	# Declare filenames of files that perform commands
 	declare -a arr=(
+		"custom_uninstall_zotero"
 		#"apt_install_zotero_0" # wget curl installation
 		#"apt_install_zotero_1" # check has root privilige
 		#"apt_install_zotero_2" # architecture check
