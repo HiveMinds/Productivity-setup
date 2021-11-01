@@ -6,9 +6,26 @@ custom_uninstall() {
 	# TODO: detect whether database exists within the previous Zotero installation, if existant.
 	# TODO: include prompt user with question whether previous Zotero installation database should be preserved.
 	# TODO: ask if previous Zotero database should be restored.
+
+	{ # try
+		sudo rm -r "/home/$(whoami)/.zotero"
+		true
+	} || { # catch
+		true
+	}
 	
-	sudo rm -r "/home/$(whoami)/.zotero"
-	sudo rm -r "/home/$(whoami)/Zotero"
-	sudo rm -r "src/submodules/zotero"
+	{ # try
+		sudo rm -r "/home/$(whoami)/Zotero"
+		true
+	} || { # catch
+		true
+	}
+	
+	{ # try
+		sudo rm -r "src/submodules/zotero"
+		true
+	} || { # catch
+		true
+	}
 }
 custom_uninstall "$@"

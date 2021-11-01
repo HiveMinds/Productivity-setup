@@ -23,11 +23,12 @@ install_zotero() {
 		#"change_default_opening_application" # of xpi file with zotero
 		#"apt_install_zotero_8" # opens addon .xpi
 		#"apt_install_zotero_9" # export xpi file of addon to extension dir
-		"apt_install_zotero_10" # removes line from prefs.js
-		"apt_install_zotero_11" # removes line from prefs.js
-		"apt_install_zotero_12" # adds the addon to extensions.json
-		#"apt_install_zotero_13" # run the application for the first time
+		#"apt_install_zotero_10" # removes line from prefs.js
+		#"apt_install_zotero_11" # removes line from prefs.js
+		#"apt_install_zotero_12" # adds the addon to extensions.json
+		"apt_install_zotero_13" # run the application for the first time
 		# run zotero
+		"apt_install_zotero_14" # set Zotero as a default application
 		# TODO: detect if libreoffice is installed, and if yes, install the libreoffice plugin
 		# TODO: detect if libreoffice is being installed, and if yes, do that first.
 		# TODO: detect if brave is installed, and if yes, install the brave plugin
