@@ -6,7 +6,8 @@ apt_install_zotero_7() {
 	mkdir -p src/submodules/zotero
 	
 	# Get the add-on source code.
-	git clone https://github.com/ethanwillis/zotero-scihub.git "src/submodules/zotero/zotero-scihub"
+	#git clone https://github.com/ethanwillis/zotero-scihub.git "src/submodules/zotero/zotero-scihub"
+	git clone git@github.com:MohamedElashri/zotero-scihub-1.git "src/submodules/zotero/zotero-scihub"
 	
 	# Ensure the npm module is installed such that you can build the add-on from its source code.
 	yes | sudo apt install npm
