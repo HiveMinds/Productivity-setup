@@ -12,6 +12,10 @@ Run the main code from the root of this repository with:
 ```
 ./main.sh
 ```
+to get a list of yes/no questions on which software you want to install. After completing the list, this repository will automatically install and configure what you chose. If you already know what you want, you can also skip the list and just type *(for example)*:
+```
+./main.sh --install zotero signal nordvpn
+```
 You can do a full uninstall of Anaconda it with:
 ```
 ./src/uninstall.sh
