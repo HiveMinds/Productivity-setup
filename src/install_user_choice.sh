@@ -13,7 +13,7 @@ source src/apt_searchmonkey.sh
 source src/apt_texlive_xetex.sh
 source src/apt_texmaker.sh
 source src/apt_wine.sh
-source src/apt_zotero.sh
+#source src/apt_zotero.sh
 source src/snap_anki.sh
 source src/snap_notepad_plus_plus.sh
 source src/custom_anaconda.sh
