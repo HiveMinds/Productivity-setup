@@ -27,4 +27,6 @@ gsettings set org.nemo.icon-view captions "['size', 'type', 'date_accessed', 'da
 #gsettings set org.nemo.sidebar-panels.tree show-only-directories false
 
 
-echo `PS1="\[\e[1m\]\u@\h \w\n\$\[\e[0m\] "` > temp.sh
+# Make the caret in bottom left always in terminal.
+echo 'PS1="\[\e[1m\]\u@\h \w\n\$\[\e[0m\]"' >> ~/.bashrc
+
