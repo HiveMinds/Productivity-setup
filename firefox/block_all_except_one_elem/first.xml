@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html lang="nl">
+ <head>
+  <meta charset="utf-8">
+   <meta content="IE=Edge" http-equiv="X-UA-Compatible"/>
+   <title>
+    Startpagina.nl | Jouw startpagina voor weer, verkeer en meer
+   </title>
+   <meta content="" name="keywords"/>
+   <meta content="Startpagina geeft je al meer dan 20 jaar een overzicht van handmatig geselecteerde links van relevante en betrouwbare Nederlandse websites." name="description"/>
+   <meta content="Startpagina.nl" name="application-name"/>
+   <meta content="width=device-width, initial-scale=1" name="viewport"/>
+   <meta content="origin" name="referrer"/>
+   <link href="/static/app-shell/images/icons/favicon-57.47a0d1932b3c.png" rel="apple-touch-icon" sizes="57x57" type="image/png"/>
+   <link href="/static/app-shell/images/icons/favicon-57.47a0d1932b3c.png" rel="icon" sizes="57x57" type="image/png"/>
+   <link href="/static/app-shell/images/icons/favicon-72.387316b17cb6.png" rel="apple-touch-icon" sizes="72x72" type="image/png"/>
+   <link href="/static/app-shell/images/icons/favicon-72.387316b17cb6.png" rel="icon" sizes="72x72" type="image/png"/>
+   <link href="/static/app-shell/images/icons/favicon-76.23de84da73a8.png" rel="apple-touch-icon" sizes="76x76" type="image/png"/>
+   <link href="/static/app-shell/images/icons/favicon-76.23de84da73a8.png" rel="icon" sizes="76x76" type="image/png"/>
+   <link href="/static/app-shell/images/icons/favicon-114.981b899bde9a.png" rel="apple-touch-icon" sizes="114x114" type="image/png"/>
+   <link href="/static/app-shell/images/icons/favicon-114.981b899bde9a.png" rel="icon" sizes="114x114" type="image/png"/>
+   <link href="/static/app-shell/images/icons/favicon-120.35c07dc3e40c.png" rel="apple-touch-icon" sizes="120x120" type="image/png"/>
+   <link href="/static/app-shell/images/icons/favicon-120.35c07dc3e40c.png" rel="icon" sizes="120x120" type="image/png"/>
+   <link href="/static/app-shell/images/icons/favicon-144.b9da8c338fc9.png" rel="apple-touch-icon" sizes="144x144" type="image/png"/>
+   <link href="/static/app-shell/images/icons/favicon-144.b9da8c338fc9.png" rel="icon" sizes="144x144" type="image/png"/>
+   <link href="/static/app-shell/images/icons/favicon-152.af58cd2a1723.png" rel="apple-touch-icon" sizes="152x152" type="image/png"/>
+   <link href="/static/app-shell/images/icons/favicon-152.af58cd2a1723.png" rel="icon" sizes="152x152" type="image/png"/>
+   <link href="/static/app-shell/images/icons/favicon.6faac3477261.ico" rel="icon" type="image/x-icon"/>
+   <link href="/manifest.json" rel="manifest">
+    <link href="/static/rainbow.0d66f5599c0c.css" rel="stylesheet" type="text/css">
+     <script src="https://cdn.optoutadvertising.com/script/ootag.min.js"/>
+     <script>
+      var ootag = ootag || {};
+  var page_zone = "home";
+  var page_category = ""
+  ootag.queue = ootag.queue || [];
+  ootag.queue.push(function () {
+    ootag.initializeOo({"consentTimeOutMS": 5000, "onlyNoConsent": true, "publisher": 24});
+    ootag.addParameter("page_category", page_category);
+    if (page_zone){
+      ootag.addParameter("page_zone", page_zone);
+    }
+  });
+     </script>
+     <script>
+      src="https://advertising-cdn.dpgmedia.cloud/web-advertising/13/30/0/advert-xandr.js" type="application/javascript"&gt;
+     </script>
+     <script>
+      data-advert-src="https://acdn.adnxs.com/ast/ast.js" data-advert-vendors="32"&gt;
+     </script>
+     <script>
+      src="https://advertising-cdn.dpgmedia.cloud/web-advertising/prebid-test2.js"&gt;
+     </script>
+     <script>
+      src="https://advertising-cdn.dpgmedia.cloud/header-bidding/prod/startpagina/5b6704c74b773465d2d474077584fae002f0e21b.js"&gt;
+     </script>
+     <script type="application/javascript">
+      (function(){if("undefined"==typeof performance.mark){performance.mark=function(){}}performance.mark("advert - inline-script - start");function a(settings){var a=window.innerWidth,b=settings.xandr.breakpoints;return Object.keys(b).reduce(function(c,d){if(b[d]
+     </script>
+    </link>
+   </link>
+  </meta>
+ </head>
+</html>
