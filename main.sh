@@ -173,7 +173,9 @@ if [ "$help_flag" == "true" ]; then
 	print_usage
 fi
 
-echo "package_list=${package_list[@]}"
+if [[ "${package_list[@]}" != "" ]]; then
+	echo "package_list=${package_list[@]}"
+fi
 
 # get list of all possible installation types and pass it to the prompt.
 function run_prompt_user_choice() {

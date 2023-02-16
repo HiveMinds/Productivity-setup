@@ -3,9 +3,9 @@
 
 # Configure firefox by adding extensions.
 set_apt_firefox_policies() {
-	manual_assert_file_exists policies.json
+	manual_assert_file_exists "src/custom/firefox/policies.json"
 	sudo mkdir -p /etc/firefox/policies
-	sudo cp policies.json /etc/firefox/policies/policies.json
+	sudo cp src/custom/firefox/policies.json /etc/firefox/policies/policies.json
 	manual_assert_file_exists /etc/firefox/policies/policies.json
 	#sudo rm /etc/firefox/policies/policies.json
 }
@@ -104,7 +104,7 @@ restore_ublock_origin_settings() {
 	
     local repo_name="restore-ublock-backup"
     local conda_env_name="restore-ublock-backup"
-	
+
 	set_apt_firefox_policies
 
     sudo rm -r "$repo_name"
@@ -123,4 +123,5 @@ restore_ublock_origin_settings() {
 	fi
 	cd ..
 	# TODO: verify path
+	echo "Done with installing ublock origin."
 }

@@ -43,7 +43,7 @@ install_user_choices() {
 			$(install_energizedprotection porn) # install user choice: energizedprotection porn package
 		elif [ "${selected_software_packages[i]}" == energizedprotection_additional ]; then
 			$(install_energizedprotection additional) # install user choice: energizedprotection porn package
-		if [ "${selected_software_packages[i]}" == firefox ]; then
+		elif [ "${selected_software_packages[i]}" == firefox ]; then
 			$(restore_ublock_origin_settings) # install user choice: anaconda
 		elif [ "${selected_software_packages[i]}" == github ]; then
 			$(install_github) # install user choice: github
