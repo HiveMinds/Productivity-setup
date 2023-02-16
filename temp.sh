@@ -14,19 +14,5 @@ ssh-add ~/.ssh/id_ed25519
 cat ~/.ssh/id_ed25519
 xdg-open https://github.com/settings/ssh/new
 
-# Always show hidden folders.
-gsettings et org.nemo.desktop show-desktop-icons true
-
-# Set the dark theme
-gsettings set org.gnome.desktop.interface gtk-theme Yaru-dark
-gsettings set org.gnome.desktop.interface cursor-theme Yaru-dark
-
-gsettings set org.nemo.icon-view captions "['size', 'type', 'date_accessed', 'date_modified']"
-
-# Also show files in the side panel of the file explorer
-#gsettings set org.nemo.sidebar-panels.tree show-only-directories false
-
-
-# Make the caret in bottom left always in terminal.
+Make the caret in bottom left always in terminal.
 echo 'PS1="\[\e[1m\]\u@\h \w\n\$\[\e[0m\]"' >> ~/.bashrc
-

@@ -5,6 +5,7 @@ source src/apt_autokey_gtk.sh
 source src/apt_github.sh
 source src/apt_brave.sh
 source src/apt_keepass2.sh
+source src/apt_nemo.sh
 source src/apt_nordvpn.sh
 source src/apt_openvpn3.sh
 source src/apt_privoxy.sh
@@ -45,9 +46,15 @@ install_user_choices() {
 		elif [ "${selected_software_packages[i]}" == github ]; then
 			$(install_github) # install user choice: github
 		elif [ "${selected_software_packages[i]}" == keepass2 ]; then
+			echo "Error keepass currently not supported. See: https://github.com/HiveMinds/Productivity-setup/issues/46"
+			exit 5
 			$(install_keepass2) # install user choice: keepass2
 		elif [ "${selected_software_packages[i]}" == language_tool ]; then
-			$(install_language_tool) # install user choice: wine
+			$(install_language_tool) # install user choice: language tools
+			echo "Error language tools currently not supported. See: https://github.com/HiveMinds/Productivity-setup/issues/50"
+			exit 5
+		elif [ "${selected_software_packages[i]}" == nemo ]; then
+			$(install_nemo) # install user choice: nordvpn
 		elif [ "${selected_software_packages[i]}" == nordvpn ]; then
 			$(install_nordvpn) # install user choice: nordvpn
 		elif [ "${selected_software_packages[i]}" == notepad++ ]; then
@@ -67,6 +74,8 @@ install_user_choices() {
 		elif [ "${selected_software_packages[i]}" == wine ]; then
 			$(install_wine) # install user choice: wine
 		elif [ "${selected_software_packages[i]}" == zotero ]; then
+			echo "Error zotero currently not supported. See: https://github.com/HiveMinds/Productivity-setup/issues/50"
+			exit 5
 			install_zotero # install user choice: zotero
 		fi
 	done

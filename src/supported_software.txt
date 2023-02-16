@@ -2,7 +2,7 @@ installationType: apt
 apt: autokey-gtk
 apt: brave
 apt: github
-apt: keepass2
+apt: nemo
 apt: nordvpn
 apt: openvpn3
 apt: privoxy
@@ -11,7 +11,6 @@ apt: signal
 apt: texlive-xetex
 apt: texmaker
 apt: wine
-apt: zotero
 installationType: snap
 snap: anki
 snap: notepad++
@@ -20,6 +19,5 @@ custom: anaconda
 custom: energizedprotection_social
 custom: energizedprotection_porn
 custom: energizedprotection_additional
-custom: language_tool
 installationType: needUserInput
 installationType: deviceDependent

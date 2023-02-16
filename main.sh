@@ -83,6 +83,8 @@ eat_argument_list() {
 			"keepass2")
 				shift # eat the remaining argument list element
 				arr+=("keepass2") # add to 	 array
+				echo "Error keepass currently not supported. See: https://github.com/HiveMinds/Productivity-setup/issues/46"
+				exit 5
 				;;
 			"nordvpn")
 				shift # eat the remaining argument list element
@@ -172,6 +174,7 @@ _setArgs  "$@"
 if [ "$help_flag" == "true" ]; then
 	print_usage
 fi
+
 
 echo "package_list=${package_list[@]}"
 
