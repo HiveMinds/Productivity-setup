@@ -215,10 +215,6 @@
         "installation_mode": "force_installed",
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/search-all-tabs/latest.xpi"
       },
-      "extension@tabliss.io": {
-        "installation_mode": "force_installed",
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/tabliss/latest.xpi"
-      },
       "firefox@tampermonkey.net": {
         "installation_mode": "force_installed",
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/tampermonkey/latest.xpi"
