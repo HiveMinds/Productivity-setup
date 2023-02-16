@@ -20,6 +20,7 @@ custom: anaconda
 custom: energizedprotection_social
 custom: energizedprotection_porn
 custom: energizedprotection_additional
+custom: firefox
 custom: language_tool
 installationType: needUserInput
 installationType: deviceDependent

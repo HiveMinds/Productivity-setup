@@ -19,6 +19,7 @@ source src/snap_notepad_plus_plus.sh
 source src/custom_anaconda.sh
 source src/custom_install_energizedprotection.sh
 source src/custom_language_tool.sh
+source src/custom/firefox/config_firefox.sh
 
 install_user_choices() {
 	# TODO: read input argument list, if it is non-zero, then do not read packages from user.
@@ -42,6 +43,8 @@ install_user_choices() {
 			$(install_energizedprotection porn) # install user choice: energizedprotection porn package
 		elif [ "${selected_software_packages[i]}" == energizedprotection_additional ]; then
 			$(install_energizedprotection additional) # install user choice: energizedprotection porn package
+		if [ "${selected_software_packages[i]}" == firefox ]; then
+			$(restore_ublock_origin_settings) # install user choice: anaconda
 		elif [ "${selected_software_packages[i]}" == github ]; then
 			$(install_github) # install user choice: github
 		elif [ "${selected_software_packages[i]}" == keepass2 ]; then

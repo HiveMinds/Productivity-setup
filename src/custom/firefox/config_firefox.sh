@@ -1,9 +1,15 @@
 #!/bin/bash
 
+
 # Configure firefox by adding extensions.
-sudo mkdir -p /etc/firefox/policies
-sudo cp policies.json /etc/firefox/policies/policies.json
-#sudo rm /etc/firefox/policies/policies.json
+set_apt_firefox_policies() {
+	manual_assert_file_exists policies.json
+	sudo mkdir -p /etc/firefox/policies
+	sudo cp policies.json /etc/firefox/policies/policies.json
+	manual_assert_file_exists /etc/firefox/policies/policies.json
+	#sudo rm /etc/firefox/policies/policies.json
+}
+
 
 # Configure Ublock Origin to remove unwanted information from websites.
 
@@ -98,7 +104,9 @@ restore_ublock_origin_settings() {
 	
     local repo_name="restore-ublock-backup"
     local conda_env_name="restore-ublock-backup"
-    
+	
+	set_apt_firefox_policies
+
     sudo rm -r "$repo_name"
 	
 	# Check if the repository exists
@@ -116,5 +124,3 @@ restore_ublock_origin_settings() {
 	cd ..
 	# TODO: verify path
 }
-
-restore_ublock_origin_settings

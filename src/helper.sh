@@ -151,3 +151,25 @@ function replace_line_in_file_with_string() {
 
     sed -i "${line_nr}s/.*/$replacement_escaped/" "$filepath"
 }
+
+#######################################
+# Verifies a file exists, throws error otherwise.
+# Local variables:
+#  filepath
+# Globals:
+#  None.
+# Arguments:
+#  Relative filepath of file whose existence is verified.
+# Returns:
+#  0 If file was found.
+#  29 If the file was not found.
+# Outputs:
+#  Nothing
+#######################################
+manual_assert_file_exists() {
+  local filepath="$1"
+  if [ ! -f "$filepath" ]; then
+    echo "The file: $filepath does not exist."
+    exit 29
+  fi
+}
