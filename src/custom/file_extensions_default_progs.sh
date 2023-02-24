@@ -5,6 +5,7 @@ set_default_opening_applications() {
 	# Declare filenames of files that perform commands
 	change_default_opening_application yml gedit $LOG_PATH
 	change_default_opening_application txt gedit $LOG_PATH
+	change_default_opening_application py vscode $LOG_PATH
 }
 
 test_language_tool() {

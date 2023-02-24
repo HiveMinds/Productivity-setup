@@ -14,7 +14,6 @@ change_default_opening_application() {
 	local application_type
 	application_type=$(extension_to_mimeapps_application_type "$file_extension")
 	local x_program_name
-
 	x_program_name=$(program_name_to_mimeapps_program_name "$program_name")
 
 	#Source: https://askubuntu.com/questions/1030281/change-default-applications-from-script
@@ -51,6 +50,8 @@ extension_to_mimeapps_application_type() {
 		echo "application"
 	elif [[ "$file_extension" == "txt" ]]; then
 		echo "text"
+	elif [[ "$file_extension" == "py" ]]; then
+		echo "text"
 	else
 		echo "Error, do not yet know x-code for file extension:$file_extension"
 		exit 6
@@ -67,6 +68,8 @@ extension_to_mimeapps_extension() {
 		echo "x-xpinstall"
 	elif [[ "$file_extension" == "txt" ]]; then
 		echo """plain"""
+	elif [[ "$file_extension" == "py" ]]; then
+		echo "x-python"	
 	else
 		echo "Error, do not yet know x-code for file extension:$file_extension"
 		exit 6
@@ -80,7 +83,7 @@ program_name_to_mimeapps_program_name() {
 	if [[ "$program_name" == "gedit" ]]; then
 		echo "org.gnome.gedit.desktop"
 	elif [[ "$program_name" == "vscode" ]]; then
-		echo "vscode"
+		echo "code.desktop"
 	else
 		echo "Error, do not yet know x-code for program_name:$program_name"
 		exit 6
