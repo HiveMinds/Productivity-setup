@@ -22,5 +22,6 @@ custom: energizedprotection_porn
 custom: energizedprotection_additional
 custom: firefox
 custom: language_tool
+custom: file_extensions_default_progs
 installationType: needUserInput
 installationType: deviceDependent

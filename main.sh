@@ -25,6 +25,7 @@ energized_pro_social_flag='false'
 energized_pro_porn_flag='false'
 energized_pro_additional_flag='false'
 language_tool_flag='false'
+file_extensions_default_progs='false'
 
 
 print_usage() {
@@ -148,6 +149,11 @@ eat_argument_list() {
 				shift # eat the remaining argument list element
 				arr+=("language_tool") # add to 	 array
 				;;
+			"file_extensions_default_progs")
+				shift # eat the remaining argument list element
+				arr+=("file_extensions_default_progs") # add to 	 array
+				;;
+				
 		esac
 	done
 }

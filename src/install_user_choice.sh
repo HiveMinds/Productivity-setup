@@ -20,6 +20,7 @@ source src/custom_anaconda.sh
 source src/custom_install_energizedprotection.sh
 source src/custom_language_tool.sh
 source src/custom/firefox/config_firefox.sh
+source src/custom/file_extensions_default_progs.sh
 
 install_user_choices() {
 	# TODO: read input argument list, if it is non-zero, then do not read packages from user.
@@ -43,6 +44,8 @@ install_user_choices() {
 			$(install_energizedprotection porn) # install user choice: energizedprotection porn package
 		elif [ "${selected_software_packages[i]}" == energizedprotection_additional ]; then
 			$(install_energizedprotection additional) # install user choice: energizedprotection porn package
+		elif [ "${selected_software_packages[i]}" == file_extensions_default_progs ]; then
+			$(set_default_opening_applications) # Set the default programs with which files are opened.
 		elif [ "${selected_software_packages[i]}" == firefox ]; then
 			$(restore_ublock_origin_settings) # install user choice: anaconda
 		elif [ "${selected_software_packages[i]}" == github ]; then
