@@ -337,16 +337,6 @@
         "Value": false,
         "Status": "locked"
       }
-    },
-    "SearchEngines": {
-      "Remove": [
-        "Amazon.com",
-        "Bing",
-        "eBay",
-        "Google",
-        "Twitter",
-        "Wikipedia (en)"
-      ]
     }
   }
 }
