@@ -2,7 +2,7 @@
 This is a set of bash scripts and that automatically install an opinonated student/developer setup on Ubuntu 20.04 with an **emphasis** on productivity and focus. It empowers the user to select actively which information the user wants to consume by fencing off undesired digital tempations. It is opinionated in the sense that it blocks all social media, youtube, image searches, news sites and adult content. Not because I think they are bad, instead it is because I am highly passionate about the opportunities that I am given and I want to give those opportunities and pursuits my complete dedication.
 
 ## Warning
-The productivity lock (s/p/a) are actually permanent. I am happy to share that I am not able to remove the lock, not even with sudo (Except for reformatting my Ubuntu installation). I am sure it is possible, but I currently do not know how, and would prefer to preserve ignorance as bliss on this matter/security through obscurity.
+The productivity lock (s/p/a) is actually permanent. I am happy to share that I am not able to remove the lock, not even with sudo (Except for reformatting my Ubuntu installation). I am sure it is possible, but I currently do not know how, and would prefer to preserve ignorance as bliss on this matter/security through obscurity.
 
 ## Usage: Installation
 Install git and download this repository:
