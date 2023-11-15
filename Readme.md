@@ -22,6 +22,13 @@ You can do a full uninstall of Anaconda it with:
 ```
 the uninstallation of the other packages is not yet created.
 
+## Add something to productivityblock:
+```sh
+pip install pyperclip
+sudo apt-get install xsel | yes
+python src/get_domains.py some_new_website,another_website
+```
+Then just `ctrl+v` it in the desired block package (and zip it to `.gz`, and there is no need update the md5 in the code.)
 
 ## Usage: Testing
 First install the required submodules with:

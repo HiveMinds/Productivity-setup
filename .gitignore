@@ -16,3 +16,6 @@ src/submodules/*
 
 package-lock.json
 firefox/restore-ublock-backup
+
+miniconda.sh
+restore-ublock-backup
