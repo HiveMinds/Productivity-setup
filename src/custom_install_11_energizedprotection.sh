@@ -44,6 +44,10 @@ append_new_social_package_to_host_file() {
 		sudo cat "$FILEPATH_UNPACKED_PACKAGE" >> "${filepath_dummy_host}"
 		
 	fi
+
+	# Ensure the hostfile becomes immutable.
+	sudo chattr +i /etc/hosts
+
 }
 
 
