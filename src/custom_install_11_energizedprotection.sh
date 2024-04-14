@@ -46,7 +46,7 @@ append_new_social_package_to_host_file() {
 	fi
 
 	# Ensure the hostfile becomes immutable.
-	sudo chattr +i /etc/hosts
+	# sudo chattr +i /etc/hosts
 
 }
 
